@@ -5,3 +5,5 @@ rencana -android-project
   *control lamp, security home
   *aplikasi pembelajaran
   
+  tambah resolusi dari fitur1
+  
