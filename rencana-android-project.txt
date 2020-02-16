@@ -4,6 +4,8 @@ rencana -android-project
      menggunakan wlan
   *control lamp, security home
   *aplikasi pembelajaran
+    
+  tambah resolusi dari fitur2
   
   tambah resolusi dari fitur1
   
