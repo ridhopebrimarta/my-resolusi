@@ -1,0 +1,3 @@
+rencana -android-project
+  *smart home with sbc raspberry pi 3 
+  *control lamp, security home
