@@ -1,3 +1,6 @@
 rencana -android-project
-  *smart home with sbc raspberry pi 3 
+  *smart home with sbc raspberry pi 3
+     menggunakan sistem operasi androin things
+     menggunakan wlan
   *control lamp, security home
+  
