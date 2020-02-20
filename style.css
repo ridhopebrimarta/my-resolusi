@@ -1,1 +1,441 @@
-
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+body {
+  margin: 0;
+  font-family: "Muli", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7c0127;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5a011d;
+}
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 255px;
+  background-color: #7c0127;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+/* Sidebar links */
+.sidebar a,
+.dropdown-btn {
+  background: none;
+  border: none;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  color: #a4a6b3;
+  padding: 16px 0 16px 40px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+.dropdown-btn {
+  width: 100%;
+  text-align: left;
+}
+/* Active/current link */
+.sidebar a.active {
+  background: #5e6069a8;
+  color: #dde2ff;
+}
+/* Links on mouse-over */
+.sidebar a:hover:not(.active),
+.dropdown-btn:hover {
+  background-color: #555;
+  color: white;
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #410014;
+  padding-left: 14px;
+}
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+.sidebar img {
+  align-content: center;
+  margin: 0.8em auto 0 11%;
+}
+.sidebar-top {
+  margin-top: 0.2em;
+  border-bottom: 1px solid rgba(223, 224, 235, 0.4);
+}
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+.main {
+  font-family: "Muli", sans-serif;
+  margin-left: 255px;
+  padding: 10px 16px;
+  height: 1000px;
+  background: #f0f0f0;
+}
+/* Add a black background color to the top navigation bar */
+.header {
+  /* margin: 20px; */
+  overflow: hidden;
+}
+.header .search-container {
+  float: right;
+}
+.header input[type="text"] {
+  padding: 6px;
+  margin: 8px;
+  font-size: 17px;
+  border: none;
+  background: rgb(209, 209, 209);
+  border-radius: 5px;
+}
+.header .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.header .search-container button:hover {
+  background: #ccc;
+}
+.page-title {
+  margin-left: 20px;
+  padding-left: 16px;
+  overflow: hidden;
+  background-color: rgb(209, 205, 205);
+  color: rgb(37, 37, 37);
+  border-radius: 10px;
+  font-weight: bold;
+}
+.content {
+  margin: 20px;
+  background: white;
+  height: auto;
+  overflow: hidden;
+  padding: 16px;
+  border-radius: 10px;
+}
+.container-edit {
+  margin: 3em 15em;
+}
+.content table{
+  text-align: center;
+}
+.tr_ul{
+  text-align: center;
+}
+#myInput {
+  background-image: url("/css/searchicon.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  text-align: center;
+}
+#myTable th,
+#myTable td {
+  text-align: center;
+  padding: 10px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+#myTable tr.header,
+#myTable tr:hover {
+  background-color: #f1f1f1;
+}
+/* Pagination links */
+.pagination {
+  margin: 1em;
+  float: right;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+/* Style the active/current link */
+.pagination a.active {
+  background-color: #fcbb6d;
+  color: white;
+}
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+.avatar img {
+  width: 30px;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.media-body {
+  flex: 1;
+  vertical-align: middle;
+}
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+/* Add styles to the form container */
+.form-container {
+  width: 300px;
+  height: 400px;
+  padding: 10px;
+  background-color: white;
+}
+/* Full-width input fields */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+.add-btn {
+  background: #fcbb6d;
+  width: 12em;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8em 1em;
+  text-decoration: none;
+  margin-bottom: 1em;
+  z-index: 4;
+  float: right;
+  outline: none;
+  cursor: pointer;
+}
+.login-btn:hover,
+.login-btn:focus {
+  background: #f89e30;
+  border-radius: 5px;
+}
+.container-add input[type="text"],
+.container-add input[type="password"],
+.container-add input[type="number"],
+.container-add input[type="email"],
+.container-add input[type="file"],
+.container-add input[type="date"],
+.container-add textarea,
+.container-add select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0.5px solid #ccc;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  z-index: 3;
+}
+.container-add {
+  padding: 20px;
+}
+button.submit {
+  background-color: #fcbb6d;
+  border-radius: 7px;
+  color: white;
+  padding: 14px 20px;
+  margin: 30px 0 0 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+}
+button.submit:hover {
+  opacity: 0.8;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed ; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0 ;
+  width: 100% ; /* Full width */
+  height: 100% ; /* Full height */
+  overflow: auto ; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0) ; /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4) ; /* Black w/ opacity */
+  padding-top: 60px;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe ;
+  margin: 1% auto 10% auto ; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888 ;
+  width: 30em ; /* Could be more or less, depending on screen size */
+}
+.modal-content.employee-add, .modal-content {
+  width: 50em;
+}
+.modal-detail {
+  width: 75em;
+}
+.modal-container, .modal-footer {
+  padding: 2em 3em;
+}
+.modal-container:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.modal-header {
+  padding: 0.3em 3em;
+}
+.modal-column {
+  float: left;
+  width: 25%;
+}
+.modal-column img {
+  margin-left: 6em;
+  width: 41%;
+}
+.show {
+  display: block ;
+}
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s ;
+  animation: animatezoom 0.6s ;
+}
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.page-total {
+  vertical-align: auto;
+  margin-left: 25px;
+  font-size: 15px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+.btn-delete{
+    width: 50px;
+    background-color: #e6195a;
+    border-radius: 7px;
+    text-shadow: none;
+}
+.btn-delete a{
+  text-decoration: none;
+  color: #dde2ff;
+}
+.btn-delete:hover{
+    background-color: #b3073e;
+}
+.btn-detail{
+    width: 50px;
+    background-color: #3993e7;
+    border-radius: 7px;
+    text-shadow: none;
+}
+.btn-detail a{
+  text-decoration: none;
+  color: #dde2ff;
+}
+.btn-detail:hover{
+    background-color: #146fc4;
+}
+.add-btn:hover{
+  background-color: #eb8d1a;
+}
+.btn-edit{
+    width: 50px;
+    background-color: #1bf807;
+    border-radius: 7px;
+    text-shadow: none;
+}
+.btn-edit a{
+  text-decoration: none;
+  color: #dde2ff;
+}
+.btn-edit:hover{
+    background-color: #2bb31f;
+}
